@@ -27,185 +27,92 @@ function () {
       }
     },
     m = [0, 7, 17, 32],
-    n = [{
+	//path (with dots)
+   n = [{
       x: 5,
       y: 1,
-      w: 56
+      w: 52 //the top path
     },
     {
       x: 5,
       y: 4,
-      w: 5
+      w: 5 //the 5 dots horizontal, 2nd from top
     },
-    {
-      x: 5,
-      y: 1,
-      h: 4
-    },
-    {
-      x: 9,
-      y: 1,
-      h: 12
-    },
-    {
-      x: 5,
-      y: 12,
-      h: 4
-    },
-    {
-      x: 10,
-      y: 12,
-      h: 4
-    },
-    {
+	{
+	  x: 19,
+	  y: 4,
+	  w: 10 //above ghost house
+	},
+	{
+	  x: 32,
+	  y: 4,
+	  w: 25 //the last 25 dots, 2nd from top
+	},
+	{
+	  x: 13,
+	  y: 5,
+	  w: 7 //top of S
+	},
+	{
+	  x: 9,
+	  y: 8,
+	  w: 7 //bottom of S
+	},
+	{
+	  x: 48,
+	  y: 9,
+	  w: 5 //bottom of E
+	},
+	{
+	  x: 19,
+	  y: 10,
+	  w: 10 //under ghost house house
+	},
+	{
+	  x: 5,
+	  y: 12,
+	  w: 15
+	},
+	{
+	  x: 28,
+	  y: 12,
+	  w: 29
+	},
+	{
+	  x: 19,
+	  y: 13,
+	  w: 4
+	},
+	{
+	  x: 25,
+	  y: 13,
+	  w: 4
+	},
+	{
       x: 5,
       y: 15,
-      w: 16
+      w: 15 //the last horizontal line
     },
-    {
-      x: 5,
-      y: 12,
-      w: 31
-    },
-    {
-      x: 60,
-      y: 1,
-      h: 4
-    },
-    {
-      x: 54,
-      y: 1,
-      h: 4
-    },
-    {
-      x: 19,
-      y: 1,
-      h: 12
-    },
-    {
-      x: 19,
-      y: 4,
-      w: 26
-    },
-    {
-      x: 13,
-      y: 5,
-      w: 7
-    },
-    {
-      x: 13,
-      y: 5,
-      h: 4
-    },
-    {
-      x: 13,
-      y: 8,
-      w: 3
-    },
-    {
-      x: 56,
-      y: 4,
-      h: 9
-    },
-    {
-      x: 48,
-      y: 4,
-      w: 13
-    },
-    {
-      x: 48,
-      y: 1,
-      h: 12
-    },
-    {
-      x: 60,
-      y: 12,
-      h: 4
-    },
-    {
-      x: 44,
+	{
+      x: 22,
       y: 15,
-      w: 17
+      w: 4 //player house
     },
-    {
-      x: 54,
-      y: 12,
-      h: 4
-    },
-    {
-      x: 44,
-      y: 12,
-      w: 17
-    },
-    {
-      x: 44,
-      y: 1,
-      h: 15
-    },
-    {
-      x: 41,
-      y: 13,
-      w: 4
-    },
-    {
-      x: 41,
-      y: 13,
-      h: 3
-    },
-    {
-      x: 38,
-      y: 13,
-      h: 3
-    },
-    {
-      x: 38,
+	{
+      x: 28,
       y: 15,
-      w: 4
-    },
-    {
-      x: 35,
-      y: 10,
       w: 10
     },
-    {
-      x: 35,
-      y: 1,
-      h: 15
-    },
-    {
-      x: 35,
-      y: 13,
-      w: 4
-    },
-    {
-      x: 21,
-      y: 12,
-      h: 4
-    },
-    {
-      x: 24,
-      y: 12,
-      h: 4
-    },
-    {
-      x: 24,
+	{
+      x: 40,
       y: 15,
-      w: 12
+      w: 17
     },
-    {
-      x: 27,
-      y: 4,
-      h: 9
-    },
+	//teleport
     {
       x: 52,
-      y: 9,
-      w: 5
-    },
-    {
-      x: 56,
       y: 8,
-      w: 10,
+      w: 9,
       type: 1
     },
     {
@@ -213,145 +120,256 @@ function () {
       y: 8,
       w: 9,
       type: 1
+    },
+	//vertical lines
+    {
+      x: 5,
+      y: 1,
+      h: 4 //top left
+    },
+	 {
+      x: 5,
+      y: 12,
+      h: 4 //bottom left
+    },
+    {
+      x: 9,
+      y: 1,
+      h: 12 //2nd from left
+    },
+    {
+      x: 10,
+      y: 12,
+      h: 4 //3nd from left
+    },
+	{
+      x: 19,
+      y: 1,
+      h: 15 //left of ghost house
+    },
+	{
+      x: 22,
+      y: 13,
+      h: 3 //right of player house
+    },
+	{
+      x: 25,
+      y: 13,
+      h: 3 //right of player house
+    },
+	{
+      x: 28,
+      y: 1,
+      h: 15 //right of ghost house
+    },
+	{
+      x: 32,
+      y: 1,
+      h: 12 //between L and V
+    },
+	{
+      x: 36,
+      y: 4,
+      h: 5 //inside V
+    },
+	{
+      x: 37,
+      y: 12,
+      h: 4 //below V
+    },
+	{
+      x: 40,
+      y: 1,
+      h: 15 //right of V
+    },
+	{
+      x: 44,
+      y: 1,
+      h: 12 //right of I
+    },
+	{
+      x: 50,
+      y: 1,
+      h: 4 //above E
+    },
+	{
+      x: 50,
+      y: 12,
+      h: 4 //above E
+    },
+	{
+      x: 52,
+      y: 4,
+      h: 9 //right of E
+    },
+	{
+      x: 56,
+      y: 1,
+      h: 4 //top right
+    },
+	{
+      x: 56,
+      y: 12,
+      h: 4 //bottom right
     }],
+	//exlude
     o = [{
       x: 1,
       y: 8,
-      w: 8
+      w: 8 //teleport left
     },
-    {
-      x: 57,
+	{
+      x: 53,
       y: 8,
-      w: 9
+      w: 8 //teleport right
     },
-    {
-      x: 44,
+	{
+      x: 28,
       y: 2,
-      h: 10
+      h: 10 //right of ghost house
     },
-    {
-      x: 35,
-      y: 5,
-      h: 7
+	{
+      x: 19,
+      y: 6,
+      h: 6 //left of ghost house
     },
-    {
-      x: 36,
+	{
+      x: 20,
       y: 4,
-      w: 8
+      w: 8 //above ghost house
     },
-    {
-      x: 36,
+	{
+      x: 20,
       y: 10,
-      w: 8
+      w: 8 //below ghost house
     },
-    {
-      x: 39,
+	{
+      x: 23,
       y: 15,
-      w: 2
+      w: 2 //player house
     }],
-    p = [{
+	//energinzer
+    p = [
+	{
       x: 5,
-      y: 15
+      y: 3 //top left
     },
-    {
+	{
       x: 5,
-      y: 3
+      y: 15 //top right
     },
-    {
+	{
+      x: 13,
+      y: 5 //top of S
+    },
+	{
       x: 15,
-      y: 8
+      y: 8 //bottom of S
     },
-    {
-      x: 60,
+	{
+      x: 36,
+      y: 8 //inside V
+    },
+	{
+	  x: 48,
+	  y: 9 //bottom of E
+	},
+	{
+      x: 56,
       y: 3
     },
     {
-      x: 60,
+      x: 56,
       y: 15
     }],
+	//teleport
     q = [{
       x: 2,
       y: 8
     },
     {
-      x: 63,
+      x: 59,
       y: 8
     }],
+	//start positions
+	//sondh changed x (-16 each)
     r = {
       1: [{
-        x: 39.5,
+        x: 23.5,
         y: 15,
         dir: 4
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 4,
         dir: 4,
         scatterX: 57,
         scatterY: -4
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 2,
         scatterX: 0,
         scatterY: -4
       },
       {
-        x: 37.625,
+        x: 21.625,
         y: 7,
         dir: 1,
-        scatterX: 57,
+        scatterX: 53,
         scatterY: 20
       },
       {
-        x: 41.375,
+        x: 25.375,
         y: 7,
         dir: 1,
         scatterX: 0,
         scatterY: 20
       }],
       2: [{
-        x: 40.25,
+        x: 24.25,
         y: 15,
         dir: 8
       },
       {
-        x: 38.75,
+        x: 22.75,
         y: 15,
         dir: 4
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 4,
         dir: 4,
-        scatterX: 57,
+        scatterX: 53,
         scatterY: -4
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 2,
         scatterX: 0,
         scatterY: -4
       },
       {
-        x: 37.625,
+        x: 21.625,
         y: 7,
         dir: 1,
-        scatterX: 57,
+        scatterX: 53,
         scatterY: 20
       },
       {
-        x: 41.375,
+        x: 25.375,
         y: 7,
         dir: 1,
         scatterX: 0,
         scatterY: 20
       }]
     },
-    s = [32, 312],
-    v = [80, 312],
+	//door position
+    s = [32, 184],
+	//fruit position
+    v = [80, 184],
     w = {
       0: 0.16,
       1: 0.23,
@@ -799,187 +817,189 @@ function () {
       penForceTime: 3,
       penLeavingLimits: [0, 0, 0, 0]
     }],
-    A = {
+    //sondh changed (-16 each)
+	A = {
       1: [{
-        x: 37.6,
+        x: 21.6,
         y: 7,
         dir: 1,
         dest: 6.375,
         speed: 0.48
       },
       {
-        x: 37.6,
+        x: 21.6,
         y: 6.375,
         dir: 2,
         dest: 7.625,
         speed: 0.48
       },
       {
-        x: 37.6,
+        x: 21.6,
         y: 7.625,
         dir: 1,
         dest: 7,
         speed: 0.48
       }],
       2: [{
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 2,
         dest: 7.625,
         speed: 0.48
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7.625,
         dir: 1,
         dest: 6.375,
         speed: 0.48
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 6.375,
         dir: 2,
         dest: 7,
         speed: 0.48
       }],
       3: [{
-        x: 41.4,
+        x: 25.4,
         y: 7,
         dir: 1,
         dest: 6.375,
         speed: 0.48
       },
       {
-        x: 41.4,
+        x: 25.4,
         y: 6.375,
         dir: 2,
         dest: 7.625,
         speed: 0.48
       },
       {
-        x: 41.4,
+        x: 25.4,
         y: 7.625,
         dir: 1,
         dest: 7,
         speed: 0.48
       }],
       4: [{
-        x: 37.6,
+        x: 21.6,
         y: 7,
         dir: 8,
         dest: 39.5,
         speed: y
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 1,
         dest: 4,
         speed: y
       }],
       5: [{
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 1,
         dest: 4,
         speed: y
       }],
       6: [{
-        x: 41.4,
+        x: 25.4,
         y: 7,
         dir: 4,
         dest: 39.5,
         speed: y
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 1,
         dest: 4,
         speed: y
       }],
       7: [{
-        x: 39.5,
+        x: 23.5,
         y: 4,
         dir: 2,
         dest: 7,
         speed: 1.6
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 4,
         dest: 37.625,
         speed: 1.6
       }],
       8: [{
-        x: 39.5,
+        x: 23.5,
         y: 4,
         dir: 2,
         dest: 7,
         speed: 1.6
       }],
       9: [{
-        x: 39.5,
+        x: 23.5,
         y: 4,
         dir: 2,
         dest: 7,
         speed: 1.6
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 8,
         dest: 41.375,
         speed: 1.6
       }],
       10: [{
-        x: 37.6,
+        x: 21.6,
         y: 7,
         dir: 8,
         dest: 39.5,
         speed: y
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 1,
         dest: 4,
         speed: y
       }],
       11: [{
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 1,
         dest: 4,
         speed: y
       }],
       12: [{
-        x: 41.4,
+        x: 25.4,
         y: 7,
         dir: 4,
         dest: 39.5,
         speed: y
       },
       {
-        x: 39.5,
+        x: 23.5,
         y: 7,
         dir: 1,
         dest: 4,
         speed: y
       }]
     },
-    B = {
+    //sondh changed x (-4 each)
+	B = {
       1: {
         actors: [{
           ghost: e,
-          x: 64,
+          x: 60,
           y: 9,
           id: 0
         },
         {
           ghost: a,
-          x: 68.2,
+          x: 64.2,
           y: 9,
           id: 1
         }],
@@ -1022,19 +1042,19 @@ function () {
       2: {
         actors: [{
           ghost: e,
-          x: 64,
+          x: 60,
           y: 9,
           id: 0
         },
         {
           ghost: a,
-          x: 70.2,
+          x: 66.2,
           y: 9,
           id: 1
         },
         {
           ghost: a,
-          x: 32,
+          x: 28,
           y: 9.5,
           id: 2
         }],
@@ -1124,13 +1144,13 @@ function () {
       3: {
         actors: [{
           ghost: e,
-          x: 64,
+          x: 60,
           y: 9,
           id: 0
         },
         {
           ghost: a,
-          x: 70.2,
+          x: 66.2,
           y: 9,
           id: 2
         }],
@@ -1904,12 +1924,12 @@ function () {
           }
           g.playfield[f][h].type = !d || h != c.x * 8 && h != (c.x + c.w - 1) * 8 ? d : 0
         }
-        g.playfield[f][c.x * 8].intersection = a;
+		g.playfield[f][c.x * 8].intersection = a;
         g.playfield[f][(c.x + c.w - 1) * 8].intersection = a
       } else {
         h = c.x * 8;
         for (f = c.y * 8; f <= (c.y + c.h - 1) * 8; f += 8) {
-          if (g.playfield[f][h].path) g.playfield[f][h].intersection = a;
+          if (g.playfield[f][h].path) g.playfield[f][h].intersection = a; 
           g.playfield[f][h].path = a;
           if (g.playfield[f][h].dot == 0) {
             g.playfield[f][h].dot = 1;
@@ -1917,7 +1937,7 @@ function () {
           }
           g.playfield[f][h].type = !d || f != c.y * 8 && f != (c.y + c.h - 1) * 8 ? d : 0
         }
-        g.playfield[c.y * 8][h].intersection = a;
+		g.playfield[c.y * 8][h].intersection = a;
         g.playfield[(c.y + c.h - 1) * 8][h].intersection = a
       }
     }
@@ -2317,9 +2337,10 @@ function () {
     g.updateCruiseElroySpeed();
     g.resetForcePenLeaveTime();
     g.figureOutPenLeaving();
-    if (g.dotsEaten == 70 || g.dotsEaten == 170) g.showFruit();
+    //if (g.dotsEaten == 70 || g.dotsEaten == 170) g.showFruit();
+	if (g.dotsEaten % 50 == 0) g.showFruit();
     g.dotsRemaining == 0 && g.finishLevel();
-    g.playAmbientSound()
+    g.playAmbientSound();
   };
   g.getFruitSprite = function (b) {
     var c = b <= 4 ? 128 : 160;
@@ -2366,6 +2387,10 @@ function () {
     g.changeGameplayMode(1)
   };
   g.playerDies = function (b) {
+	if (g.playerCount > 1 && b == 0) {
+	  //well, simply ignore! Hahahahah
+	  return;
+	} 
     g.playerDyingId = b;
     g.changeGameplayMode(2)
   };
@@ -2974,7 +2999,8 @@ function () {
     }
   };
   g.addCss = function () {
-    var b = "#pcm-c {  width: 554px;  border-top: 25px solid black;  padding-bottom: 25px;  height: 136px;  position: relative;  background: black;  outline: 0;  overflow: hidden;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}#pcm-c * {  position: absolute;  overflow: hidden;}#pcm-p,#pcm-cc {  left: 45px;  width: 464px;  height: 136px;  z-index: 99;  overflow: hidden;}#pcm-p .pcm-d {  width: 2px;  height: 2px;  margin-left: 3px;  margin-top: 3px;  background: #f8b090;  z-index: 100;}#pcm-p .pcm-e {  width: 8px;  height: 8px;  z-index: 101;}#pcm-sc-1 {  left: 18px;  top: 16px;  width: 8px;  height: 56px;  position: absolute;  overflow: hidden;}#pcm-sc-2 {  left: 18px;  top: 80px;  width: 8px;  height: 56px;  position: absolute;  overflow: hidden;}#pcm-le {  position: absolute;  left: 515px;  top: 74px;  height: 64px;  width: 32px;} #pcm-le div {  position: relative;}#pcm-sc-1-l {    left: -2px;  top: 0;  width: 48px;  height: 8px;}#pcm-sc-2-l {    left: -2px;  top: 64px;  width: 48px;  height: 8px;}#pcm-so {  left: 7px;  top: 116px;  width: 12px;  height: 12px;  border: 8px solid black;  cursor: pointer;}#pcm-li {  position: absolute;  left: 523px;  top: 0;  height: 80px;  width: 16px;}#pcm-li .pcm-lif {  position: relative;  width: 16px;  height: 12px;  margin-bottom: 3px;}#pcm-p.blk .pcm-e {  visibility: hidden;}#pcm-c .pcm-ac {  width: 16px;  height: 16px;  margin-left: -4px;  margin-top: -4px;  z-index: 110;}#pcm-c .pcm-n {  z-index: 111;}#pcm-c #pcm-stck {  z-index: 109;}#pcm-c #pcm-gbug {  width: 32px;}#pcm-c #pcm-bpcm {  width: 32px;  height: 32px;  margin-left: -20px;  margin-top: -20px;}#pcm-f,#pcm-le div {  width: 32px;  height: 16px;  z-index: 105;}#pcm-f {  margin-left: -8px;  margin-top: -4px;}#pcm-do {  width: 19px;  height: 2px;  left: 279px;  top: 46px;  overflow: hidden;  position: absolute;  background: #ffaaa5;}#pcm-re {  width: 48px;  height: 8px;  z-index: 120;  left: 264px;  top: 80px;}#pcm-go {  width: 80px;  height: 8px;  z-index: 120;  left: 248px;  top: 80px;}";
+	//sondh changed width and left
+    var b = "#pcm-c {  width: 522px;  border-top: 25px solid black;  padding-bottom: 25px;  height: 136px;  position: relative;  background: black;  outline: 0;  overflow: hidden;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}#pcm-c * {  position: absolute;  overflow: hidden;}#pcm-p,#pcm-cc {  left: 45px;  width: 432px;  height: 136px;  z-index: 99;  overflow: hidden;}#pcm-p .pcm-d {  width: 2px;  height: 2px;  margin-left: 3px;  margin-top: 3px;  background: #f8b090;  z-index: 100;}#pcm-p .pcm-e {  width: 8px;  height: 8px;  z-index: 101;}#pcm-sc-1 {  left: 18px;  top: 16px;  width: 8px;  height: 56px;  position: absolute;  overflow: hidden;}#pcm-sc-2 {  left: 18px;  top: 80px;  width: 8px;  height: 56px;  position: absolute;  overflow: hidden;}#pcm-le {  position: absolute;  left: 515px;  top: 74px;  height: 64px;  width: 32px;} #pcm-le div {  position: relative;}#pcm-sc-1-l {    left: -2px;  top: 0;  width: 48px;  height: 8px;}#pcm-sc-2-l {    left: -2px;  top: 64px;  width: 48px;  height: 8px;}#pcm-so {  left: 7px;  top: 116px;  width: 12px;  height: 12px;  border: 8px solid black;  cursor: pointer;}#pcm-li {  position: absolute;  left: 523px;  top: 0;  height: 80px;  width: 16px;}#pcm-li .pcm-lif {  position: relative;  width: 16px;  height: 12px;  margin-bottom: 3px;}#pcm-p.blk .pcm-e {  visibility: hidden;}#pcm-c .pcm-ac {  width: 16px;  height: 16px;  margin-left: -4px;  margin-top: -4px;  z-index: 110;}#pcm-c .pcm-n {  z-index: 111;}#pcm-c #pcm-stck {  z-index: 109;}#pcm-c #pcm-gbug {  width: 32px;}#pcm-c #pcm-bpcm {  width: 32px;  height: 32px;  margin-left: -20px;  margin-top: -20px;}#pcm-f,#pcm-le div {  width: 32px;  height: 16px;  z-index: 105;}#pcm-f {  margin-left: -8px;  margin-top: -4px;}#pcm-do {  width: 19px;  height: 2px;  left: 151px;  top: 46px;  overflow: hidden;  position: absolute;  background: #ffaaa5;}#pcm-re {  width: 48px;  height: 8px;  z-index: 120;  left: 134px;  top: 80px;}#pcm-go {  width: 80px;  height: 8px;  z-index: 120;  left: 118px;  top: 80px;}";
     g.styleElement =
     document.createElement("style");
     g.styleElement.type = "text/css";
